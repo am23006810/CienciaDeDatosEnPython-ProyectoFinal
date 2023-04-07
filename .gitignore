@@ -1,2 +1,4 @@
 .ipynb_checkpoints/
 tmp/.ipynb_checkpoints/
+escec.cfg
+tmp/__pycache__/
