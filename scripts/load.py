@@ -1,10 +1,7 @@
 import boto3
-import configparser
 import pandas as pd
 
-def load_to_dl(complete_df, AWS_S3_BUCKET, key):
-    config = configparser.ConfigParser()
-    config.read('../escec.cfg')
+def load_to_dl(complete_df, AWS_S3_BUCKET, key, config):
 
     complete_df.to_csv(
         f"s3://{AWS_S3_BUCKET}/{key}",

@@ -1,13 +1,10 @@
 import boto3
-import configparser
 import psycopg2
 import numpy as np
 import pandas as pd
 
 
-def extractRDS():
-    config = configparser.ConfigParser()
-    config.read('../escec.cfg')
+def extractRDS(config):
 
     aws_conn = boto3.client('rds', aws_access_key_id=config.get('IAM', 'ACCESS_KEY'),
                         aws_secret_access_key=config.get('IAM', 'SECRET_ACCESS_KEY'),
@@ -29,10 +26,7 @@ def extractRDS():
     return rose_data
 
 
-def extractS3():
-
-    config = configparser.ConfigParser()
-    config.read('../escec.cfg')
+def extractS3(config):
 
     s3client = boto3.client(
         's3',
