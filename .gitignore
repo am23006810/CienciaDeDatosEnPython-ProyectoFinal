@@ -3,3 +3,4 @@ tmp/.ipynb_checkpoints/
 escec.cfg
 tmp/__pycache__/
 preparation/__pycache__/
+scripts/__pycache__/
